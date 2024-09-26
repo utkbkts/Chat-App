@@ -16,10 +16,7 @@ const RegisterPage = () => {
   const navigate = useNavigate();
   const onSubmit = async (values) => {
     try {
-      const response = await axiosInstance.post(
-        `${import.meta.env.VITE_REACT_APP_API}/auth/register`,
-        values
-      );
+      const response = await axiosInstance.post(`/auth/register`, values);
       localStorage.setItem("user", JSON.stringify(response.data));
       toast.success("Register successfully");
       navigate("/");

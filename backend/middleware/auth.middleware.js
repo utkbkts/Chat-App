@@ -1,8 +1,8 @@
-import User from "../models/auth.model";
-import ErrorHandler from "../utils/errorHandler";
-import catchAsyncError from "./catch.middleware";
+import User from "../models/auth.model.js";
+import ErrorHandler from "../utils/errorHandler.js";
+import catchAsyncError from "./catch.middleware.js";
 import jwt from "jsonwebtoken";
-export const isAuthenticatedUser = catchAsyncError(async (req, res) => {
+export const isAuthenticatedUser = catchAsyncError(async (req, res, next) => {
   const { jwtToken } = req.cookies;
 
   if (!jwtToken) {

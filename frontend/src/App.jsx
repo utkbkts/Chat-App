@@ -13,7 +13,6 @@ import LoginPage from "./pages/auth/LoginPage";
 import { useAuth } from "./context/AuthContext";
 const App = () => {
   const { authState } = useAuth();
-  console.log("🚀 ~ App ~ authState:", authState);
   const router = createBrowserRouter([
     {
       path: "/",
@@ -22,7 +21,7 @@ const App = () => {
       children: [
         {
           path: "/",
-          element: <HomePage />,
+          element: !authState ? <Navigate to={"/login"} /> : <HomePage />,
         },
         {
           path: "/signup",

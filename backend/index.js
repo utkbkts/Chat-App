@@ -5,6 +5,8 @@ import helmet from "helmet";
 import cookieParser from "cookie-parser";
 //use
 import authRouters from "./routes/auth.routes.js";
+import userRouters from "./routes/user.routes.js";
+import messageRouters from "./routes/message.routes.js";
 import ConnectedDatabase from "./db/mongoDB.js";
 import errorMiddleware from "./middleware/error.middleware.js";
 const app = express();
@@ -25,6 +27,8 @@ process.on("uncaughtException", (err) => {
 });
 //use
 app.use("/api/auth", authRouters);
+app.use("/api/user", userRouters);
+app.use("/api/message", messageRouters);
 //error middleware
 app.use(errorMiddleware);
 const server = app.listen(process.env.PORT, () => {

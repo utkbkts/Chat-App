@@ -16,13 +16,11 @@ const LoginPage = () => {
   const navigate = useNavigate();
   const onSubmit = async (values) => {
     try {
-      const response = await axiosInstance.post(
-        `${import.meta.env.VITE_REACT_APP_API}/auth/login`,
-        values
-      );
+      const response = await axiosInstance.post(`/auth/login`, values);
       localStorage.setItem("user", JSON.stringify(response.data));
       toast.success("Login successfully");
       navigate("/");
+      navigate(0);
     } catch (err) {
       toast.error(err.response.data.message);
     }
