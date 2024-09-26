@@ -1,6 +1,7 @@
 import catchAsyncError from "../middleware/catch.middleware.js";
 import User from "../models/auth.model.js";
 import ErrorHandler from "../utils/errorHandler.js";
+import sendToken from "../utils/sendToken.js";
 
 const register = catchAsyncError(async (req, res, next) => {
   const { name, username, email, password, gender, confirmPassword } = req.body;

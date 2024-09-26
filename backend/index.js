@@ -9,6 +9,7 @@ import ConnectedDatabase from "./db/mongoDB.js";
 import errorMiddleware from "./middleware/error.middleware.js";
 const app = express();
 app.use(cookieParser());
+app.use(express.json());
 app.use(helmet());
 dotenv.config();
 app.use(
