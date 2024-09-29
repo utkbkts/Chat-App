@@ -2,7 +2,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import axiosInstance from "../../libs/Axios";
 import toast from "react-hot-toast";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { LoginSchema } from "../../validation/RegisterSchema";
 const LoginPage = () => {
   const {
@@ -58,6 +58,12 @@ const LoginPage = () => {
           <button type="submit" className="btn btn-primary w-full">
             Login
           </button>
+          <span className="flex items-center pt-2">
+            Dont you have an account?
+            <Link to={"/signup"} className="underline text-blue-600">
+              Signup
+            </Link>
+          </span>
         </form>
       </div>
     </div>

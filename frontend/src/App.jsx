@@ -12,7 +12,7 @@ import RegisterPage from "./pages/auth/RegisterPage";
 import LoginPage from "./pages/auth/LoginPage";
 import { useAuth } from "./context/AuthContext";
 const App = () => {
-  const { authState } = useAuth();
+  const [authState] = useAuth();
   const router = createBrowserRouter([
     {
       path: "/",

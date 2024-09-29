@@ -9,7 +9,7 @@ import userRouters from "./routes/user.routes.js";
 import messageRouters from "./routes/message.routes.js";
 import ConnectedDatabase from "./db/mongoDB.js";
 import errorMiddleware from "./middleware/error.middleware.js";
-const app = express();
+import { app, server } from "./socketIO/server.js";
 app.use(cookieParser());
 app.use(express.json());
 app.use(helmet());
@@ -31,7 +31,8 @@ app.use("/api/user", userRouters);
 app.use("/api/message", messageRouters);
 //error middleware
 app.use(errorMiddleware);
-const server = app.listen(process.env.PORT, () => {
+
+server.listen(process.env.PORT, () => {
   ConnectedDatabase();
   console.log(`server is running PORT:${process.env.PORT}`);
 });

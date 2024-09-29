@@ -3,7 +3,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { RegisterSchema } from "../../validation/RegisterSchema";
 import axiosInstance from "../../libs/Axios";
 import toast from "react-hot-toast";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 const RegisterPage = () => {
   const {
     register,
@@ -114,6 +114,12 @@ const RegisterPage = () => {
           <button type="submit" className="btn btn-primary w-full">
             Register
           </button>
+          <span className="flex items-center pt-2">
+            Do you have an account?
+            <Link to={"/login"} className="underline text-blue-600">
+              Login
+            </Link>
+          </span>
         </form>
       </div>
     </div>
