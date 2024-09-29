@@ -59,5 +59,6 @@ JWT_EXPIRES_TIME=""
 6.**.env Frontend--**
 ```bash
 MODE=development
+Actually, there is no need for this. We are already working in development mode. When we deploy, it automatically goes to production mode.
 ```
 
