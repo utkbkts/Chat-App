@@ -9,7 +9,7 @@
 ![screencapture-localhost-5173-2024-09-29-22_49_38](https://github.com/user-attachments/assets/f9ca04a4-d65a-4d4d-9389-ff5a033a52aa)
 ![screencapture-localhost-5173-login-2024-09-29-22_38_50](https://github.com/user-attachments/assets/f66ec1da-025c-4e57-8192-2fe1784a12a9)
 
-## 🚀 Proje Özellikleri
+## 🚀 Project Features
 
 - **Modern Design**: A stylish design with TailwindCss.
 - **Node.js Backend**: A secure and efficient server structure for fast data processing.
