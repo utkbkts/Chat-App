@@ -46,6 +46,7 @@ npm run build
 ```
 5.**.env**
 ```bash
+Backend--
 MONGODB_URI=""
 FRONTEND_URL=""
 PORT=""
@@ -54,5 +55,6 @@ COOKIE_EXPRES_TIME=""
 JWT_SECRET=""
 JWT_EXPIRES_TIME=""
 
+frontend--
 MODE=development
 ```
