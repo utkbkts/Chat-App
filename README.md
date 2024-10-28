@@ -1,6 +1,6 @@
 # 🎉 Chat App
 
-**Welcome!** The Chat application is a restaurant platform that allows you to easily order delicious meals through a user-friendly interface. This project offers a comprehensive experience for both users and administrators.
+**Welcome!** A reliable chat application where you can instantly message
 
 ---
 
