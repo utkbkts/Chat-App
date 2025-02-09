@@ -14,7 +14,7 @@
 
 ## 🔗 Bağlantılar
 
-- **Canlı Demo**: https://chat-app-ytto.onrender.com
+- **Canlı Demo**: https://chat-app-rsgj.onrender.com
 - **Youtube Video**: https://www.youtube.com/watch?v=g_w0VopM_uU
 ---
 ## 📦 Technologies
