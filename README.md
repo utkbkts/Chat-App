@@ -1,3 +1,6 @@
+email : utkutest
+şifre : 123123
+
 # 🎉 Chat App
 
 **Welcome!** A reliable chat application where you can instantly message
