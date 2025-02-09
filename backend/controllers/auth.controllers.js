@@ -27,9 +27,12 @@ const register = catchAsyncError(async (req, res, next) => {
   if (usernameExists) {
     return next(new ErrorHandler("Username already exists", 400));
   }
-
-  const profilePic = `https://robohash.org/${username}.png`;
-
+  let profilePic = ""
+  if(gender === "male"){
+      profilePic = "https://avatar.iran.liara.run/public/boy"
+  }else{
+     profilePic = "https://avatar.iran.liara.run/public/girl"
+  }
   const user = await User.create({
     name,
     username,
